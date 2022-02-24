@@ -10,6 +10,10 @@ const Box = styled.div`
   height: 100px;
 `;
 
+const Circle = styled(Box)`
+  border-radius: 50%;
+`;
+
 const Text = styled.span`
   color: white;
 `;
@@ -20,7 +24,7 @@ function App() {
       <Box bgColor="tomato">
         <Text>Hello</Text>
       </Box>
-      <Box bgColor="teal" />
+      <Circle bgColor="teal" />
     </Father>
   );
 }
