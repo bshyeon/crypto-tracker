@@ -12,6 +12,10 @@ to{
   transform: rotate(360deg);
 }`;
 
+const Emoji = styled.span`
+  font-size: 50px;
+`;
+
 const Box = styled.div`
   width: 200px;
   height: 200px;
@@ -20,8 +24,7 @@ const Box = styled.div`
   justify-content: center;
   align-items: center;
   animation: ${rotationAnimation} 1s linear infinite;
-  span {
-    font-size: 50px;
+  ${Emoji} {
     &:hover {
       font-size: 60px;
     }
@@ -32,7 +35,7 @@ function App() {
   return (
     <Wrapper>
       <Box>
-        <span>👱‍♂️</span>
+        <Emoji>👱‍♂️</Emoji>
       </Box>
     </Wrapper>
   );
