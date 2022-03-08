@@ -78,6 +78,11 @@ const Tab = styled.span<{ isActive: boolean }>`
   }
 `;
 
+const Previous = styled.div`
+  margin-bottom: 20px;
+  color: ${(props) => props.theme.accentColor};
+`;
+
 interface RouteParams {
   coinId: string;
 }
@@ -170,6 +175,10 @@ function Coin() {
           {state?.name ? state?.name : loading ? "Loading..." : infoData?.name}
         </Title>
       </Header>
+
+      <Previous>
+        <Link to="/">&larr; Previous Page</Link>
+      </Previous>
       {loading ? (
         <Loader>"Loading..."</Loader>
       ) : (
