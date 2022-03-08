@@ -23,6 +23,7 @@ const Header = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0px;
 `;
 
 const Loader = styled.span`
@@ -31,7 +32,7 @@ const Loader = styled.span`
   font-size: 30px;
 `;
 
-const Title = styled.h1`
+const Title = styled.span`
   font-size: 34px;
   color: ${(props) => props.theme.accentColor};
 `;
@@ -204,7 +205,7 @@ function Coin() {
               <Price />
             </Route>
             <Route path={`/:coinId/chart`}>
-              <Chart />
+              <Chart coinId={coinId} />
             </Route>
           </Switch>
         </>

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -15,6 +14,7 @@ const Header = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 30px 0px;
 `;
 
 const Loader = styled.span`
@@ -49,7 +49,7 @@ const Coin = styled.li`
   }
 `;
 
-const Title = styled.h1`
+const Title = styled.span`
   font-size: 34px;
   color: ${(props) => props.theme.accentColor};
 `;
